@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 65.2%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    background-color: tan;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.content__result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.content__result--text {
+    font-size: 2rem;
+}
+
+.copy--btn {
+    border: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.copy--btn:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.copy--btn:active {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.content__btn {
+    font-size: 2rem;
+    margin-top: 50px;
+    border-radius: 25px;
+    border: none;
+    padding: 8px 30px;
+}
+
+.content__btn:hover {
+    box-shadow: 0 0 5px white;
+}
+
+.content__btn:active {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.notif {
+    position: absolute;
+    top: 10%;
+    display: none;
+    transition: all 0.5s;
+}
+
+
+@media (max-width: 768px) {
+    .content{
+        margin: 50px;
+    }
+    .content__text{
+        font-size: 3rem;
+    }
+    .content__result{
+        flex-direction: column;
+    }
+    .content__result--text{
+        font-size: 1.7rem;
+    }
+    
+}
