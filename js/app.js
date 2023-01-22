@@ -11,15 +11,13 @@ btn.onclick = function () {
         randomNum = Math.floor(Math.random() * 255 + 1).toString();
         rgb.push(randomNum)
     }
-    title.style.color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]}`;
+    title.style.color = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
     bodyBg.style.background = `linear-gradient(${rgb[0]}deg, rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]}), rgb(${rgb[3]}, ${rgb[4]}, ${rgb[5]}))`;
     rgb = []
     result.innerText = `${bodyBg.style.background.valueOf()}`
 }
 
-
-
-// 'copy function'dan foydalanilgan!
+// 'copy function'dan foydalanilgan!🌐
 let copyBtn = document.querySelector('.copy--btn');
 let notification = document.querySelector('.notif');
 copyBtn.onclick = function () {
@@ -33,13 +31,14 @@ copyBtn.onclick = function () {
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
-
     setTimeout(() => {
         notification.style.display = 'block';
+        notification.classList.add('animate__fadeInDown');
     }, 300);
     setTimeout(() => {
         notification.classList.remove('animate__fadeInDown');
         notification.classList.add('animate__bounceOut');
     }, 1500);
+    notification.style.display = 'none';
     notification.classList.remove('animate__bounceOut');
 }

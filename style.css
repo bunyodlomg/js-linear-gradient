@@ -75,12 +75,14 @@ body {
 }
 
 .notif {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 10%;
     display: none;
-    transition: all 0.5s;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 8px;
 }
-
 
 @media (max-width: 768px) {
     .content{
@@ -95,5 +97,4 @@ body {
     .content__result--text{
         font-size: 1.7rem;
     }
-    
 }
