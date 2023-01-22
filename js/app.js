@@ -19,8 +19,7 @@ btn.onclick = function () {
     result.innerText = `${bodyBg.style.background.valueOf()}`
     result.style.marginLeft = '0px'
     result.style.marginRight = 'auto'
-    copyBtn.style.marginLeft = 'auto'
-    copyBtn.style.marginRight = '0px'
+    copyBtn.style.display = 'block'
     
 }
 
